@@ -3,16 +3,17 @@ import { BrowserProvider } from 'ethers';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaWallet } from 'react-icons/fa';
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 
 import Cars from './pages/Cars';
 import Properties from './pages/Properties';
 import Rental from './pages/Rental';
 import Collectibles from './pages/Collectibles';
 import Learn from './pages/Learn';
-import { Link } from 'react-router-dom';
 // Sidebar component
 function Sidebar() {
   return (
+    <Router>
     <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style={{ width: "280px", height: "100vh" }}>
       <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-wallet" viewBox="0 0 16 16">
@@ -24,6 +25,9 @@ function Sidebar() {
       <ul className="nav nav-pills flex-column mb-auto">
         <li className="nav-item">
           <Link to="/Cars" className="nav-link active">
+          <svg className="bi pe-none me-2" width="16" height="16">
+              <use xlinkHref="#speedometer2"></use>
+            </svg>
             Cars
             </Link>
         </li>
@@ -62,7 +66,8 @@ function Sidebar() {
       </ul>
       <hr />
     </div>
-  );
+    </Router>
+    );
 }
 
 function App() {
