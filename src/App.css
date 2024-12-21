@@ -1,0 +1,50 @@
+body {
+    background-color: #313030;
+    font-family: 'Roboto', sans-serif;
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff8c00;
+  }
+  
+  .container {
+    text-align: center;
+    margin-top: 10%;
+  }
+  
+  button {
+    background-color: #ff8c00;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #f5a623;
+    transform: scale(1.05);
+  }
+  
+  .wallet-info {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #ff8c00;
+  }
+  
+  .wallet-container {
+    text-align: center;
+    margin-top: 10%;
+  }
+  
+  .wallet-icon {
+    width: 60px;
+    margin-bottom: 10px;
+  }
