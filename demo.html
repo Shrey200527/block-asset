@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Asset - BlockAsset</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .content-section {
+            padding: 40px;
+        }
+
+        .nft-section {
+            background-color: white;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .nft-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .nft-info {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        .buy-now-button {
+            background-color: #f6851b;
+            color: white;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-now-button:hover {
+            background-color: #e67718;
+        }
+
+        .metamask-icon {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: #f6851b;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Maintenance Record Table */
+        .maintenance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .maintenance-table th, .maintenance-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .maintenance-table th {
+            background-color: #f2f2f2;
+        }
+
+        .transaction-history, .verification-section {
+            margin-top: 30px;
+        }
+
+        .transaction-history table, .verification-section table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .transaction-history th, .verification-section th,
+        .transaction-history td, .verification-section td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .transaction-history th, .verification-section th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with profile icon -->
+    <header>
+        <h1>BlockAsset - Car Asset</h1>
+        <div class="profile-icon">👤</div>
+    </header>
+
+    <!-- NFT Section -->
+    <section id="nft" class="content-section">
+        <div class="nft-section">
+            <!-- Car Image -->
+            <img src="./tesla.webp" alt="Car Image">
+
+            <!-- Car Details -->
+            <h2>Car: 2018 Tesla Model 3</h2>
+            <p class="nft-info"><strong>Token ID:</strong> #432543522345</p>
+            <p class="nft-info"><strong>Blockchain:</strong> Ethereum</p>
+            <p class="nft-info"><strong>Asset Type:</strong> Car NFT</p>
+            <p class="nft-info"><strong>Owner:</strong> Sharma Ji</p>
+            <p class="nft-info"><strong>Condition:</strong> Good</p>
+            <p class="nft-info"><strong>Last Maintenance:</strong> October 2023</p>
+            <p class="nft-info"><strong>Odometer Reading:</strong> 25,000 KM</p>
+            <p class="nft-info"><strong>User Rating:</strong> ⭐⭐⭐⭐⭐ (4.8/5)</p>
+
+            <!-- Maintenance Records Table -->
+            <h3>Maintenance Records</h3>
+            <table class="maintenance-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Service Type</th>
+                        <th>Service Provider</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>October 2023</td>
+                        <td>Battery Check & Service</td>
+                        <td>Tesla Service Center</td>
+                        <td>₹30000</td>
+                    </tr>
+                    <tr>
+                        <td>April 2023</td>
+                        <td>Tire Rotation</td>
+                        <td>Local Auto Shop</td>
+                        <td>₹500</td>
+                    </tr>
+                    <tr>
+                        <td>December 2022</td>
+                        <td>Brake Inspection</td>
+                        <td>Tesla Service Center</td>
+                        <td>₹5000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Buy Now Button with MetaMask icon -->
+            <div class="buy-now-section">
+                <a href="javascript:void(0);" class="buy-now-button" onclick="buyNow()">
+                    Buy Now
+                    <img src="./metamask.webp" alt="MetaMask" class="metamask-icon">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transaction History -->
+    <section class="transaction-history content-section">
+        <h3>Transaction History</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Transaction Date</th>
+                    <th>Buyer</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>March 2023</td>
+                    <td>Alice</td>
+                    <td>3 ETH</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>January 2023</td>
+                    <td>Bob</td>
+                    <td>2.5 ETH</td>
+                    <td>Completed</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Asset Verification -->
+    <section class="verification-section content-section">
+        <h3>Asset Verification</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Verification Type</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ownership</td>
+                    <td>Verified</td>
+                    <td>October 2023</td>
+                </tr>
+                <tr>
+                    <td>Vehicle Registration</td>
+                    <td>Verified</td>
+                    <td>January 2023</td>
+                </tr>
+                <tr>
+                    <td>Insurance</td>
+                    <td>Verified</td>
+                    <td>February 2023</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Powered by <a href="https://blockasset.com">BlockAsset</a></p>
+    </footer>
+
+    <!-- JavaScript for MetaMask Integration -->
+    <script>
+        // Function to handle the "Buy Now" button click
+        async function buyNow() {
+            if (typeof window.ethereum !== 'undefined') {
+                // Request user to connect their MetaMask wallet
+                try {
+                    // Request account access
+                    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                    const account = accounts[0];
+
+                    // Proceed with the purchase (you can implement your logic here)
+                    // Example: Sending a transaction to a smart contract (just an example)
+                    const transactionParameters = {
+                        to: '0xYourSmartContractAddress',  // Replace with the address you want to interact with
+                        from: account,
+                        value: '0x' + (1 * 10**18).toString(16), // Example: sending 1 ETH
+                    };
+
+                    // Send a transaction
+                    const txHash = await ethereum.request({
+                        method: 'eth_sendTransaction',
+                        params: [transactionParameters],
+                    });
+
+                    console.log('Transaction sent:', txHash);
+                    alert('Transaction successful! Transaction Hash: ' + txHash);
+                } catch (error) {
+                    console.error('Error connecting to MetaMask or sending transaction:', error);
+                    alert('Transaction failed: ' + error.message);
+                }
+            } else {
+                alert('MetaMask is not installed. Please install MetaMask to continue.');
+            }
+        }
+    </script>
+</body>
+</html>
